@@ -16,3 +16,9 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+
+repositories {
+    mavenCentral()
+}
+dependencies {implementation group: 'com.slickqa', name: 'testng', version: '7.0.0-7'}

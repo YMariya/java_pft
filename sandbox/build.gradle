@@ -21,4 +21,4 @@ test {
 repositories {
     mavenCentral()
 }
-dependencies {implementation group: 'com.slickqa', name: 'testng', version: '7.0.0-7'}
+dependencies {implementation group: 'org.testng', name: 'testng', version: '7.4.0'}

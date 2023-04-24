@@ -9,7 +9,6 @@ public class MyFirstProgram {
         hello("Alexei");
 
         Square s = new Square(5); //создать новый обьект
-        //s.l = 5; // начение атрибута
         System.out.println("Площадь квадрата со стороной " + s.l + "=" + s.area());
 
         Rectangle r = new Rectangle(4, 5);

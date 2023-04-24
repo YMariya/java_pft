@@ -4,16 +4,16 @@ public class Point {
 
     public static double x1, y1, x2, y2;
 
+    public Point (double x1, double y1) {
+    }
 
 
     public static void main(String[] args) {
-        Point p1 = new Point();
-        Point p2 = new Point();
+        Point p1 = new Point(1,3);
+        Point p2 = new Point(x2,y2);
+x2 = 4;
+y2 = 5;
 
-        p1.x1 = 4;
-        p1.y1 = 10;
-        p2.x2 = 5;
-        p2.y2 = 8;
 
 
         System.out.println("Расстояние между точками = " + p1.distance(p2));

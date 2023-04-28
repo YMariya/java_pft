@@ -9,7 +9,7 @@ import java.time.Duration;
 
 
 public class GroupCreationTests {
-    private WebDriver driver;
+    private WebDriver wd;
     private String baseUrl;
     private boolean acceptNextAlert = true;
     private StringBuffer verificationErrors = new StringBuffer();
@@ -18,41 +18,70 @@ public class GroupCreationTests {
     @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
 
-        driver = new ChromeDriver();
+        wd = new ChromeDriver();
         baseUrl = "https://www.google.com/";
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        js = (JavascriptExecutor) driver;
-        driver.get("http://localhost/addressbook/");
-        driver.findElement(By.name("user")).click();
-        driver.findElement(By.name("user")).clear();
-        driver.findElement(By.name("user")).sendKeys("admin");
-        driver.findElement(By.name("pass")).clear();
-        driver.findElement(By.name("pass")).sendKeys("secret");
-        driver.findElement(By.xpath("//input[@value='Login']")).click();
+        wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        js = (JavascriptExecutor) wd;
+        login("admin", "secret");
+    }
+
+
+    private void login(String username, String password) {
+        wd.get("http://localhost/addressbook/");
+        wd.findElement(By.name("user")).click();
+        wd.findElement(By.name("user")).clear();
+        wd.findElement(By.name("user")).sendKeys(username);
+        wd.findElement(By.name("pass")).clear();
+        wd.findElement(By.name("pass")).sendKeys(password);
+        wd.findElement(By.xpath("//input[@value='Login']")).click();
     }
 
     @Test
     public void testGroupCreation() throws Exception {
 
-        driver.findElement(By.linkText("groups")).click();
-        driver.findElement(By.name("new")).click();
-        driver.findElement(By.name("group_name")).click();
-        driver.findElement(By.name("group_name")).clear();
-        driver.findElement(By.name("group_name")).sendKeys("test1");
-        driver.findElement(By.name("group_header")).click();
-        driver.findElement(By.name("group_header")).clear();
-        driver.findElement(By.name("group_header")).sendKeys("test2");
-        driver.findElement(By.name("group_footer")).click();
-        driver.findElement(By.name("group_footer")).clear();
-        driver.findElement(By.name("group_footer")).sendKeys("test3");
-        driver.findElement(By.name("submit")).click();
-        driver.findElement(By.linkText("group page")).click();
-        driver.findElement(By.linkText("Logout")).click();
+        gotoGroupPage();
+        initGroupCreation();
+        fillGroupForm(new GroupData("test1", "test2", "test3"));
+        submitGroupCreation();
+        teturnToGroupPage();
+        Logout();
+    }
+
+    private void Logout() {
+        wd.findElement(By.linkText("Logout")).click();
+    }
+
+    private void teturnToGroupPage() {
+        wd.findElement(By.linkText("group page")).click();
+    }
+
+    private void submitGroupCreation() {
+        wd.findElement(By.name("submit")).click();
+    }
+
+    private void fillGroupForm(GroupData groupData) {
+        wd.findElement(By.name("group_name")).click();
+        wd.findElement(By.name("group_name")).clear();
+        wd.findElement(By.name("group_name")).sendKeys(groupData.getName());
+        wd.findElement(By.name("group_header")).click();
+        wd.findElement(By.name("group_header")).clear();
+        wd.findElement(By.name("group_header")).sendKeys(groupData.getHeader());
+        wd.findElement(By.name("group_footer")).click();
+        wd.findElement(By.name("group_footer")).clear();
+        wd.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
+    }
+
+    private void initGroupCreation() {
+        wd.findElement(By.name("new")).click();
+    }
+
+    private void gotoGroupPage() {
+        wd.findElement(By.linkText("groups")).click();
     }
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() throws Exception {
-        driver.quit();
+        wd.quit();
         String verificationErrorString = verificationErrors.toString();
         if (!"".equals(verificationErrorString)) {
             fail(verificationErrorString);
@@ -63,7 +92,7 @@ public class GroupCreationTests {
 
     private boolean isAlertPresent() {
         try {
-            driver.switchTo().alert();
+            wd.switchTo().alert();
             return true;
         } catch (NoAlertPresentException e) {
             return false;

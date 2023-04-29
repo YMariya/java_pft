@@ -43,15 +43,16 @@ public class GroupCreationTests {
         initGroupCreation();
         fillGroupForm(new GroupData("test1", "test2", "test3"));
         submitGroupCreation();
-        teturnToGroupPage();
+        returnToGroupPage();
         Logout();
+
     }
 
     private void Logout() {
         wd.findElement(By.linkText("Logout")).click();
     }
 
-    private void teturnToGroupPage() {
+    private void returnToGroupPage() {
         wd.findElement(By.linkText("group page")).click();
     }
 

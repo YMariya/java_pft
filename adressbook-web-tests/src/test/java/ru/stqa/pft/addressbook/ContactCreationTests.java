@@ -16,17 +16,17 @@ public class ContactCreationTests {
     private StringBuffer verificationErrors = new StringBuffer();
     private JavascriptExecutor js;
 
-    @BeforeClass(alwaysRun = true)
+    @BeforeMethod(alwaysRun = true)
     public void setUp() throws Exception {
 
         wd = new ChromeDriver();
         baseUrl = "https://www.google.com/";
         wd.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         js = (JavascriptExecutor) wd;
+        login();
     }
 
-    @Test
-    public void ContactCreation() throws Exception {
+    private void login() {
         wd.get("http://localhost/addressbook/");
         wd.findElement(By.name("user")).click();
         wd.findElement(By.name("user")).clear();
@@ -34,7 +34,31 @@ public class ContactCreationTests {
         wd.findElement(By.name("pass")).clear();
         wd.findElement(By.name("pass")).sendKeys("secret");
         wd.findElement(By.xpath("//input[@value='Login']")).click();
-        wd.findElement(By.linkText("add new")).click();
+    }
+
+    @Test
+    public void testContactCreation() throws Exception {
+
+        gotoContactPage();
+        fillContactFotm();
+        submitContactCreation();
+        returnToHomePage();
+        logout();
+    }
+
+    private void logout() {
+        wd.findElement(By.linkText("Logout")).click();
+    }
+
+    private void returnToHomePage() {
+        wd.findElement(By.linkText("home")).click();
+    }
+
+    private void submitContactCreation() {
+        wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
+    }
+
+    private void fillContactFotm() {
         wd.findElement(By.name("firstname")).click();
         wd.findElement(By.name("firstname")).clear();
         wd.findElement(By.name("firstname")).sendKeys("Петр");
@@ -47,12 +71,13 @@ public class ContactCreationTests {
         wd.findElement(By.name("email")).click();
         wd.findElement(By.name("email")).clear();
         wd.findElement(By.name("email")).sendKeys("234ff@gmail.com");
-        wd.findElement(By.xpath("//div[@id='content']/form/input[21]")).click();
-        wd.findElement(By.linkText("home")).click();
-        wd.findElement(By.linkText("Logout")).click();
     }
 
-    @AfterClass(alwaysRun = true)
+    private void gotoContactPage() {
+        wd.findElement(By.linkText("add new")).click();
+    }
+
+    @AfterMethod(alwaysRun = true)
     public void tearDown() throws Exception {
         wd.quit();
         String verificationErrorString = verificationErrors.toString();

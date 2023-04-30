@@ -2,6 +2,7 @@ package ru.stqa.pft.addressbook.test;
 
 
 import org.testng.annotations.*;
+import ru.stqa.pft.addressbook.model.ContactData;
 
 
 public class ContactCreationTests extends TestBase {

@@ -29,17 +29,6 @@ public class GroupHelper extends HelperBase {
         click(By.name("new"));
     }
 
-    public void submitContactCreation() {
-        click(By.xpath("//div[@id='content']/form/input[21]"));
-    }
-
-    public void fillContactForm(ContactData contactData) {
-        type(By.name("firstname"), contactData.getFirstname());
-        type(By.name("lastname"), contactData.getLastname());
-        type(By.name("address"), contactData.getAddress());
-        type(By.name("email"), contactData.getEmail());
-    }
-
     public void returnToHomePage() {
         click(By.linkText("home"));
     }
@@ -60,19 +49,5 @@ public class GroupHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    public void selectContact() {
-        click(By.id("4"));
-    }
 
-    public void deleteSelectContact() {
-        click(By.xpath("//div[2]/input"));
-    }
-
-    public void editContact() {
-        click(By.xpath("//tr[6]/td[8]/a/img"));
-    }
-
-    public void submitContactModification() {
-        click(By.xpath("//input[22]"));
-    }
 }

@@ -46,4 +46,13 @@ public class ContactHelper extends GroupHelper {
         }
 
 
+    public void createContact(ContactData contact, boolean b) {
+        fillContactForm(contact,b);
+        submitContactCreation();
+        returnToHomePage();
+    }
+
+    public boolean isThereAContact() {
+        return  isElementPresent(By.xpath("//table[@id='maintable']/tbody/tr[3]/td/input"));
+    }
 }

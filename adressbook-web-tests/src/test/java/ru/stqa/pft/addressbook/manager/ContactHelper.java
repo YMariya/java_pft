@@ -16,21 +16,21 @@ public class ContactHelper extends GroupHelper {
         click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
-    public void fillContactForm(ContactData contactData, boolean creation) {
+    public void fillContactForm(ContactData contactData) {
         type(By.name("firstname"), contactData.getFirstname());
         type(By.name("lastname"), contactData.getLastname());
         type(By.name("address"), contactData.getAddress());
         type(By.name("email"), contactData.getEmail());
 
-        if (creation) {
-            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-        } else {
-            Assert.assertFalse(isElementPresent(By.name("new_group")));
-        }
+//        if (creation) {
+//            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+//        } else {
+//            Assert.assertFalse(isElementPresent(By.name("new_group")));
+//        }
 
     }
         public void selectContact () {
-            click(By.xpath("//table[@id='maintable']/tbody/tr[3]/td/input"));
+            click(By.name("selected[]"));
         }
 
         public void deleteSelectContact () {
@@ -38,7 +38,7 @@ public class ContactHelper extends GroupHelper {
         }
 
         public void editContact () {
-            click(By.xpath("//tr[6]/td[8]/a/img"));
+            click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
         }
 
         public void submitContactModification () {
@@ -46,8 +46,8 @@ public class ContactHelper extends GroupHelper {
         }
 
 
-    public void createContact(ContactData contact, boolean b) {
-        fillContactForm(contact,b);
+    public void createContact(ContactData contact) {
+        fillContactForm(contact);
         submitContactCreation();
         returnToHomePage();
     }

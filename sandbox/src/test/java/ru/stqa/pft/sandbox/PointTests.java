@@ -13,7 +13,6 @@ public class PointTests {
     }
 
 
-
     @Test
     public void testPointv2() {
         Point p1 = new Point(0, 0);

@@ -8,6 +8,8 @@ import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends GroupHelper {
 
+    private boolean creation;
+
     public ContactHelper(WebDriver wd) {
         super(wd);
     }
@@ -23,12 +25,11 @@ public class ContactHelper extends GroupHelper {
         type(By.name("email"), contactData.getEmail());
 
 //        if (creation) {
-//            new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+//            new Select(wd.findElement(By.name("selected[]"))).selectByVisibleText(contactData.getFirstname());
 //        } else {
-//            Assert.assertFalse(isElementPresent(By.name("new_group")));
+//            Assert.assertFalse(isElementPresent(By.linkText("add new")));
 //        }
-
-    }
+         }
         public void selectContact () {
             click(By.name("selected[]"));
         }
@@ -47,12 +48,21 @@ public class ContactHelper extends GroupHelper {
 
 
     public void createContact(ContactData contact) {
+
         fillContactForm(contact);
         submitContactCreation();
         returnToHomePage();
     }
 
     public boolean isThereAContact() {
-        return  isElementPresent(By.xpath("//table[@id='maintable']/tbody/tr[3]/td/input"));
+        return  isElementPresent(By.name("selected[]"));
+    }
+
+
+    public void addContact() {
+
+        fillContactForm(new ContactData("Петр", "Иванов", "Москва", "234ff@gmail.com", "test1"));
+        submitContactCreation();
+        returnToHomePage();
     }
 }

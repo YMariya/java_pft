@@ -50,9 +50,9 @@ public class GroupHelper extends HelperBase {
     }
 
 
-    public void createGroup(GroupData group) {
+    public void createGroup(GroupData creation) {
        initGroupCreation();
-       fillGroupForm(group);
+       fillGroupForm(creation);
         submitGroupCreation();
         returnToGroupPage();
     }

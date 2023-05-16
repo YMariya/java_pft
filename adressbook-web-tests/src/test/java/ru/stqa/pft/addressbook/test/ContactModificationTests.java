@@ -10,7 +10,10 @@ public class ContactModificationTests extends TestBase{
     public void testContactModification() {
 
         app.getNavigationHelper().gotoHome();
-
+        if ( ! app.getContactHelper().isThereAContact()){
+            app.getNavigationHelper().gotoContactPage();
+            app.getContactHelper().addContact();
+        }
         app.getContactHelper().editContact();
         app.getContactHelper().fillContactForm(new ContactData("firstname","lastname","address","email", null));
         app.getContactHelper().submitContactModification();

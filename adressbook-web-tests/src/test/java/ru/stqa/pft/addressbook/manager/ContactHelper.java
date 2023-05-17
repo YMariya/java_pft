@@ -61,7 +61,7 @@ public class ContactHelper extends GroupHelper {
 
     public void addContact() {
 
-        fillContactForm(new ContactData("Петр", "Иванов", "Москва", "234ff@gmail.com", "test1"));
+        fillContactForm(new ContactData("Петр", "Иванов", "Москва", "234ff@gmail.com"));
         submitContactCreation();
         returnToHomePage();
     }

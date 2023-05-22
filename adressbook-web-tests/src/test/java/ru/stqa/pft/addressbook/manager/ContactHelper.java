@@ -30,8 +30,8 @@ public class ContactHelper extends GroupHelper {
 //            Assert.assertFalse(isElementPresent(By.linkText("add new")));
 //        }
          }
-        public void selectContact () {
-            click(By.name("selected[]"));
+        public void selectContact (int index) {
+            wd.findElements(By.name("selected[]")).get(index).click();
         }
 
         public void deleteSelectContact () {
@@ -64,5 +64,9 @@ public class ContactHelper extends GroupHelper {
         fillContactForm(new ContactData("Петр", "Иванов", "Москва", "234ff@gmail.com"));
         submitContactCreation();
         returnToHomePage();
+    }
+
+    public int getContactCount() {
+      return wd.findElements(By.name("selected[]")).size();
     }
 }

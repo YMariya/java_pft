@@ -77,7 +77,7 @@ public class ContactHelper extends GroupHelper {
 
     public List<ContactData> getContactList() {
         List<ContactData> contacts = new ArrayList<ContactData>();
-        List<WebElement> elements = wd.findElements(By.cssSelector("td.center"));
+        List<WebElement> elements = wd.findElements(By.xpath("//tr[@name = 'entry']"));
         for (WebElement element : elements) {
             String name = element.getText();
             ContactData contact = new ContactData(name, null, null, null);

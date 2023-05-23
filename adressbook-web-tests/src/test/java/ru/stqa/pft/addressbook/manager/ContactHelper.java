@@ -43,8 +43,9 @@ public class ContactHelper extends GroupHelper {
             click(By.xpath("//div[2]/input"));
         }
 
-        public void editContact () {
-            click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+        public void editContact (int index)  {
+           // click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
+            wd.findElements(By.name("selected[]")).get(index).click();
         }
 
         public void submitContactModification () {
@@ -80,6 +81,7 @@ public class ContactHelper extends GroupHelper {
         List<WebElement> elements = wd.findElements(By.xpath("//tr[@name = 'entry']"));
         for (WebElement element : elements) {
             String name = element.getText();
+            String id = element.findElement(By.tagName("input")).getAttribute("value");
             ContactData contact = new ContactData(name, null, null, null);
             contacts.add(contact);
         }

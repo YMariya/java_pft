@@ -45,7 +45,9 @@ public class ContactHelper extends GroupHelper {
 
         public void editContact (int index)  {
            // click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
-            wd.findElements(By.name("selected[]")).get(index).click();
+            // wd.findElements(By.name("selected[]")).get(index).click();
+            wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
+
         }
 
         public void submitContactModification () {

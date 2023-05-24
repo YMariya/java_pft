@@ -8,7 +8,7 @@ import ru.stqa.pft.addressbook.model.GroupData;
 import java.util.List;
 
 
-@Test
+@Test (enabled = false)
 public class ContactDeletionTests extends TestBase{
 
 

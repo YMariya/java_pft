@@ -12,31 +12,29 @@ import java.util.List;
 public class ContactDeletionTests extends TestBase{
     @BeforeMethod
     public void ensurePreconditions() {
-        app.goTo().gotoHome();
+        app.goTo().home();
 
-        if ( ! app.getContactHelper().isThereAContact()){
-            app.goTo().gotoContactPage();
-            app.getContactHelper().addContact();
+        if ( app.contact().getContactList().size() == 0){
+            app.goTo().contact();
+            app.contact().add();
         }
     }
 
     public void testContactDeletion() {
-        List<ContactData> before = app.getContactHelper().getContactList();
-        app.getContactHelper().selectContact(before.size() -1);
+        List<ContactData> before = app.contact().getContactList();
+        int index = before.size() -1;
+        app.contact().delete(index);
+        app.goTo().home();
 
-        app.getContactHelper().deleteSelectContact();
-        app.wd.switchTo().alert().accept();
-
-        app.goTo().gotoHome();
-
-
-        List<ContactData> after = app.getContactHelper().getContactList();
+        List<ContactData> after = app.contact().getContactList();
         Assert.assertEquals(after.size(),before.size() - 1);
 
-        before.remove(before.size() - 1);
+        before.remove(index);
         Assert.assertEquals(before,after);
 
     }
+
+
 
 
 }

@@ -19,11 +19,11 @@ public class NavigationHelper extends HelperBase {
         click(By.linkText("groups"));
     }
 
-    public void gotoContactPage() {
+    public void contact() {
         wd.findElement(By.linkText("add new")).click();
     }
 
-    public void gotoHome() {if (isElementPresent(By.id("maintable"))){
+    public void home() {if (isElementPresent(By.id("maintable"))){
         return;
     }
         click(By.linkText("home"));

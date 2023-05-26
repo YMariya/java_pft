@@ -8,7 +8,7 @@ import ru.stqa.pft.addressbook.model.ContactData;
 import java.util.List;
 
 
-@Test (enabled = false)
+@Test //(enabled = false)
 public class ContactDeletionTests extends TestBase{
     @BeforeMethod
     public void ensurePreconditions() {

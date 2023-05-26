@@ -96,8 +96,9 @@ public class ContactHelper extends GroupHelper {
         for (WebElement element : elements) {
             List<WebElement> rowElements = element.findElements(By.tagName("td"));
             String name = rowElements.get(2).getText();
+            String lastname = rowElements.get(1).getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            ContactData contact = new ContactData(id, name, null, null, null);
+            ContactData contact = new ContactData(id, name, lastname, null, null);
             contacts.add(contact);
         }
         return contacts;

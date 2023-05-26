@@ -18,12 +18,14 @@ public class ContactModificationTests extends TestBase{
             app.contact().add();
         }
     }
-    @Test //(enabled = false)
+    @Test// (enabled = false)
 
     public void testContactModification() {
         List<ContactData> before = app.contact().getContactList();
         int index = before.size() -1;
-        ContactData contact = new ContactData( before.get(index).getId(),"firstname","lastname","address","email");
+        ContactData contact = new ContactData()
+                .setId(before.get(index).getId()).withFirstname("firstname")
+                .withLastname("lastname").withAddress("address");
 
         app.contact().modify(index, contact);
         List<ContactData> after = app.contact().getContactList();

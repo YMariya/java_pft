@@ -81,7 +81,7 @@ public class ContactHelper extends GroupHelper {
 
     public void add() {
 
-        fillContactForm(new ContactData("Петр", "Иванов", "Москва", "234ff@gmail.com"));
+        fillContactForm(new ContactData().withFirstname("Иван").withLastname("Сидоров").withAddress("Москва"));
         submitContactCreation();
         returnToHomePage();
     }
@@ -98,7 +98,7 @@ public class ContactHelper extends GroupHelper {
             String name = rowElements.get(2).getText();
             String lastname = rowElements.get(1).getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            ContactData contact = new ContactData(id, name, lastname, null, null);
+            ContactData contact = new ContactData().setId(id).withFirstname(name).withLastname(lastname);
             contacts.add(contact);
         }
         return contacts;

@@ -2,36 +2,57 @@ package ru.stqa.pft.addressbook.model;
 
 public class ContactData {
     private int id;
-    private final String firstname;
-    private final String lastname;
-    private final String address;
-    private final String email;
+    private  String firstname;
+    private  String lastname;
+    private  String address;
+    private  String email;
     private String group;
 
-    public ContactData(int id, String firstname, String lastname, String address, String email) {
-        this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.address = address;
-        this.email = email;
-
-    }
-
-    public ContactData( String firstname, String lastname, String address, String email) {
-        this.id = 0;
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.address = address;
-        this.email = email;
-
-    }
+//    public ContactData(int id, String firstname, String lastname, String address, String email) {
+//        this.id = id;
+//        this.firstname = firstname;
+//        this.lastname = lastname;
+//        this.address = address;
+//        this.email = email;
+//
+//    }
+//
+//    public ContactData( String firstname, String lastname, String address, String email) {
+//        this.id = 0;
+//        this.firstname = firstname;
+//        this.lastname = lastname;
+//        this.address = address;
+//        this.email = email;
+//
+//    }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public ContactData setId(int id) {
         this.id = id;
+        return this;
+    }
+
+    public ContactData withFirstname(String firstname) {
+        this.firstname = firstname;
+        return this;
+    }
+
+    public ContactData withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+
+    public ContactData withAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public ContactData withEmail(String email) {
+        this.email = email;
+        return this;
     }
 
     public String getFirstname() {

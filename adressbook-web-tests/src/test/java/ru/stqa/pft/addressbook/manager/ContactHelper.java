@@ -94,7 +94,8 @@ public class ContactHelper extends GroupHelper {
         List<ContactData> contacts = new ArrayList<ContactData>();
         List<WebElement> elements = wd.findElements(By.xpath("//tr[@name = 'entry']"));
         for (WebElement element : elements) {
-            String name = element.getText();
+            List<WebElement> rowElements = element.findElements(By.tagName("td"));
+            String name = rowElements.get(2).getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
             ContactData contact = new ContactData(id, name, null, null, null);
             contacts.add(contact);

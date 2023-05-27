@@ -6,25 +6,9 @@ public class ContactData {
     private  String lastname;
     private  String address;
     private  String email;
-    private String group;
 
-//    public ContactData(int id, String firstname, String lastname, String address, String email) {
-//        this.id = id;
-//        this.firstname = firstname;
-//        this.lastname = lastname;
-//        this.address = address;
-//        this.email = email;
-//
-//    }
-//
-//    public ContactData( String firstname, String lastname, String address, String email) {
-//        this.id = 0;
-//        this.firstname = firstname;
-//        this.lastname = lastname;
-//        this.address = address;
-//        this.email = email;
-//
-//    }
+
+
 
     public int getId() {
         return id;
@@ -71,9 +55,7 @@ public class ContactData {
         return email;
     }
 
-    public String getGroup() {
-        return group;
-    }
+
 
     @Override
     public String toString() {

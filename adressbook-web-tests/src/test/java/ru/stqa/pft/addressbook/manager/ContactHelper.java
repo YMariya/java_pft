@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ContactHelper extends GroupHelper {
 
@@ -98,9 +100,25 @@ public class ContactHelper extends GroupHelper {
             String name = rowElements.get(2).getText();
             String lastname = rowElements.get(1).getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            ContactData contact = new ContactData().setId(id).withFirstname(name).withLastname(lastname);
+            ContactData contact = new ContactData().whithId(id).withFirstname(name).withLastname(lastname);
             contacts.add(contact);
         }
         return contacts;
     }
+
+    public Set<ContactData> allContacts() {
+        Set<ContactData> contacts = new HashSet<ContactData>();
+        List<WebElement> elements = wd.findElements(By.xpath("//tr[@name = 'entry']"));
+        for (WebElement element : elements) {
+            List<WebElement> rowElements = element.findElements(By.tagName("td"));
+            String name = rowElements.get(2).getText();
+            String lastname = rowElements.get(1).getText();
+            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+            ContactData contact = new ContactData().whithId(id).withFirstname(name).withLastname(lastname);
+            contacts.add(contact);
+        }
+        return contacts;
+    }
+
+
 }

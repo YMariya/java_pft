@@ -37,6 +37,9 @@ public class ContactHelper extends GroupHelper {
         public void selectContact (int index) {
             wd.findElements(By.name("selected[]")).get(index).click();
         }
+    public void selectContactById (int id) {
+        wd.findElement(By.cssSelector("input[value'"+ id + "']")).click();
+    }
 
         public void deleteSelectContact () {
             click(By.xpath("//div[2]/input"));
@@ -60,8 +63,8 @@ public class ContactHelper extends GroupHelper {
         submitContactCreation();
         returnToHomePage();
     }
-    public void modify(int index, ContactData contact) {
-        editContact(index);
+    public void modifyContacts( ContactData contact) {
+        editContact(contact.getId());
         fillContactForm(contact);
         submitContactModification();
         returnToHomePage();
@@ -69,11 +72,15 @@ public class ContactHelper extends GroupHelper {
 
     public void delete(int index) {
         selectContact(index);
-
         deleteSelectContact();
         wd.switchTo().alert().accept();
+    }
 
 
+    public void delete(ContactData contact) {
+        selectContactById(contact.getId());
+        deleteSelectContact();
+        wd.switchTo().alert().accept();
     }
 
     public boolean isThereAContact() {

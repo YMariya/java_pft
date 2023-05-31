@@ -13,7 +13,7 @@ import java.util.Set;
 public class ContactHelper extends GroupHelper {
 
     private boolean creation;
-
+    private WebElement element;
     public ContactHelper(WebDriver wd) {
         super(wd);
     }
@@ -27,12 +27,6 @@ public class ContactHelper extends GroupHelper {
         type(By.name("lastname"), contactData.getLastname());
         type(By.name("address"), contactData.getAddress());
         type(By.name("email"), contactData.getEmail());
-
-//        if (creation) {
-//            new Select(wd.findElement(By.name("selected[]"))).selectByVisibleText(contactData.getFirstname());
-//        } else {
-//            Assert.assertFalse(isElementPresent(By.linkText("add new")));
-//        }
          }
         public void selectContact (int index) {
             wd.findElements(By.name("selected[]")).get(index).click();
@@ -45,12 +39,15 @@ public class ContactHelper extends GroupHelper {
             click(By.xpath("//div[2]/input"));
         }
 
-        public void editContact (int index)  {
-           // click(By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
-            // wd.findElements(By.name("selected[]")).get(index).click();
-            wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
 
+
+    public void editContact(int id) {
+        element = wd.findElement(By.cssSelector("a[href='edit.php?id=" +  id + "']"));
+        element.isSelected();
+        if (!element.isSelected()) {
+            element.click();
         }
+    }
 
         public void submitContactModification () {
             click(By.xpath("//input[22]"));
@@ -64,6 +61,7 @@ public class ContactHelper extends GroupHelper {
         returnToHomePage();
     }
     public void modifyContacts( ContactData contact) {
+
         editContact(contact.getId());
         fillContactForm(contact);
         submitContactModification();

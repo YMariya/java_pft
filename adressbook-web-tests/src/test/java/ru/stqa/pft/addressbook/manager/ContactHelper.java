@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
+import ru.stqa.pft.addressbook.model.Groups;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -33,7 +34,11 @@ public class ContactHelper extends GroupHelper {
             wd.findElements(By.name("selected[]")).get(index).click();
         }
     public void selectContactById (int id) {
-        wd.findElement(By.cssSelector("input[value'"+ id + "']")).click();
+        element = wd.findElement(By.cssSelector("input[value='" + id + "']"));
+        element.isSelected();
+        if (!element.isSelected()) {
+            element.click();
+        }
     }
 
         public void deleteSelectContact () {
@@ -59,6 +64,7 @@ public class ContactHelper extends GroupHelper {
 
         fillContactForm(contact);
         submitContactCreation();
+        contactCache = null;
         returnToHomePage();
     }
     public void modifyContacts( ContactData contact) {
@@ -66,6 +72,7 @@ public class ContactHelper extends GroupHelper {
         editContact(contact.getId());
         fillContactForm(contact);
         submitContactModification();
+        contactCache = null;
         returnToHomePage();
     }
 
@@ -80,6 +87,7 @@ public class ContactHelper extends GroupHelper {
         selectContactById(contact.getId());
         deleteSelectContact();
         wd.switchTo().alert().accept();
+        contactCache = null;
     }
 
     public boolean isThereAContact() {
@@ -112,8 +120,12 @@ public class ContactHelper extends GroupHelper {
         return contacts;
     }
 
+    private Contacts contactCache = null;
     public Contacts allContacts() {
-        Contacts contacts = new Contacts();
+        if (contactCache != null) {
+            return new Contacts(contactCache);
+        }
+        contactCache = new Contacts();
         List<WebElement> elements = wd.findElements(By.xpath("//tr[@name = 'entry']"));
         for (WebElement element : elements) {
             List<WebElement> rowElements = element.findElements(By.tagName("td"));
@@ -121,9 +133,9 @@ public class ContactHelper extends GroupHelper {
             String lastname = rowElements.get(1).getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
             ContactData contact = new ContactData().whithId(id).withFirstname(name).withLastname(lastname);
-            contacts.add(contact);
+            contactCache.add(contact);
         }
-        return contacts;
+        return new Contacts(contactCache);
     }
 
 

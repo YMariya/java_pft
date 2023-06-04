@@ -133,10 +133,10 @@ public class ContactHelper extends GroupHelper {
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
             String name = rowElements.get(2).getText();
             String lastname = rowElements.get(1).getText();
-            String[] phones = rowElements.get(5).getText().split("\n");
+            String allPhones = rowElements.get(5).getText();
 
             ContactData contact = new ContactData().withId(id).withFirstname(name).withLastname(lastname)
-                    .withHomePhone(phones[0]).withMobilePhone(phones[1]).withWorkPhone(phones[2]);
+                    .withAllPhones(allPhones);
             contactCache.add(contact);
         }
         return new Contacts(contactCache);

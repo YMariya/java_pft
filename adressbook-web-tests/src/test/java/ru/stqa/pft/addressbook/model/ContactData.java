@@ -132,4 +132,16 @@ public class ContactData {
     public void setTelhome(String telhome) {
         this.telhome = telhome;
     }
+
+    public String getAllPhones() {
+        return allPhones;
+    }
+
+    public ContactData withAllPhones(String allPhones) {
+        this.allPhones = allPhones;
+        return this;
+    }
+
+    public String allPhones;
+
 }

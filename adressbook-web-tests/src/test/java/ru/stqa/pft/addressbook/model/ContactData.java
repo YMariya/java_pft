@@ -86,7 +86,7 @@ public class ContactData {
         return result;
     }
     private String newAdress;
-    public ContactData withNewAdress(String address) {
+    public ContactData withNewAdress(String newAdress) {
 
         this.newAdress = newAdress;
         return this;}
@@ -143,5 +143,44 @@ public class ContactData {
     }
 
     public String allPhones;
+    public String email2;
+    public ContactData withEmail2(String email2) {
+        this.email2 = email2;
+        return this;
+    }
+    public String email3;
 
+    public String getEmail2() {
+        return email2;
+    }
+
+    public void setEmail2(String email2) {
+        this.email2 = email2;
+    }
+
+    public String getEmail3() {
+        return email3;
+    }
+
+    public void setEmail3(String email3) {
+        this.email3 = email3;
+    }
+
+    public ContactData withEmail3(String email3) {
+        this.email3 = email3;
+        return this;
+    }
+
+    public String allEmails;
+    public String getAllEmails() {
+        return allEmails;
+    }
+
+    public String getNewAdress() {
+        return newAdress;
+    }
+
+    public void setNewAdress(String newAdress) {
+        this.newAdress = newAdress;
+    }
 }

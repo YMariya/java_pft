@@ -34,9 +34,8 @@ public class ContactDeletionTests extends TestBase{
         ContactData deletedContacts = before.iterator().next();
         app.contact().delete(deletedContacts);
         app.goTo().home();
-
+        Assert.assertEquals(app.contact().getContactCount(),before.size()-1);
         Contacts after = app.contact().allContacts();
-        assertEquals(after.size(),before.size() - 1);
 
         assertThat(after, equalTo(before.withOut(deletedContacts)));
 

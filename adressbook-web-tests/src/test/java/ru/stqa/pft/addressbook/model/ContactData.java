@@ -14,7 +14,7 @@ public class ContactData {
         return id;
     }
 
-    public ContactData whithId(int id) {
+    public ContactData withId(int id) {
         this.id = id;
         return this;
     }
@@ -84,5 +84,52 @@ public class ContactData {
         result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
         result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
         return result;
+    }
+    private String newAdress;
+    public ContactData withNewAdress(String address) {
+
+        this.newAdress = newAdress;
+        return this;}
+
+    private String telhome;
+    public ContactData withHomePhone(String telhome) {
+        this.telhome = telhome;
+        return this;
+    }
+
+    private String mobilePhone;
+    public ContactData withMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+        return this;
+
+}
+    private String workPhone;
+    public ContactData withWorkPhone(String workPhone) {
+        this.workPhone = workPhone;
+        return this;
+    }
+
+    public String getWorkPhone() {
+        return workPhone;
+    }
+
+    public void setWorkPhone(String workPhone) {
+        this.workPhone = workPhone;
+    }
+
+    public String getMobilePhone() {
+        return mobilePhone;
+    }
+
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
+    }
+
+    public String getHomePhone() {
+        return telhome;
+    }
+
+    public void setTelhome(String telhome) {
+        this.telhome = telhome;
     }
 }

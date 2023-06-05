@@ -175,9 +175,9 @@ public class ContactData {
     public String getAllEmails() {
         return allEmails;
     }
-
+    public String allAdress;
     public String getNewAdress() {
-        return newAdress;
+        return allAdress;
     }
 
     public void setNewAdress(String newAdress) {

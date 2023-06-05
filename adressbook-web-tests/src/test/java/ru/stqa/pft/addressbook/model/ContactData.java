@@ -154,17 +154,13 @@ public class ContactData {
         return email2;
     }
 
-    public void setEmail2(String email2) {
-        this.email2 = email2;
-    }
+
 
     public String getEmail3() {
         return email3;
     }
 
-    public void setEmail3(String email3) {
-        this.email3 = email3;
-    }
+
 
     public ContactData withEmail3(String email3) {
         this.email3 = email3;

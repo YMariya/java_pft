@@ -147,7 +147,7 @@ public class ContactHelper extends GroupHelper {
         String firstname = wd.findElement(By.name("firstname")).getAttribute("value");
         String lastname = wd.findElement(By.name("lastname")).getAttribute("value");
         String address = wd.findElement(By.name("address")).getText();
-        String email1 = wd.findElement(By.name("email")).getAttribute("value");
+        String email = wd.findElement(By.name("email")).getAttribute("value");
         String email2 = wd.findElement(By.name("email2")).getAttribute("value");
         String email3 = wd.findElement(By.name("email3")).getAttribute("value");
         String telhome = wd.findElement(By.name("home")).getAttribute("value");
@@ -157,7 +157,7 @@ public class ContactHelper extends GroupHelper {
         wd.navigate().back();
 
         return new ContactData().withId(contact.getId()).withFirstname(firstname)
-                .withLastname(lastname).withEmail(email1).withNewAdress(address).withMobilePhone(mobilPhone).withHomePhone(telhome).
+                .withLastname(lastname).withEmail(email).withNewAdress(address).withMobilePhone(mobilPhone).withHomePhone(telhome).
                 withWorkPhone(workPhone).withEmail2(email2).withEmail3(email3);
     }
 

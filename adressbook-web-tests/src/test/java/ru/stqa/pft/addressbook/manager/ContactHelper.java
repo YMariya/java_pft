@@ -134,9 +134,9 @@ public class ContactHelper extends GroupHelper {
             String name = rowElements.get(2).getText();
             String lastname = rowElements.get(1).getText();
             String allPhones = rowElements.get(5).getText();
-
+            String allEmails = rowElements.get(4).getText();
             ContactData contact = new ContactData().withId(id).withFirstname(name).withLastname(lastname)
-                    .withAllPhones(allPhones);
+                    .withAllPhones(allPhones).withAllEmails(allEmails);
             contactCache.add(contact);
         }
         return new Contacts(contactCache);

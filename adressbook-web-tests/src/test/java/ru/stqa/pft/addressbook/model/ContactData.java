@@ -171,6 +171,10 @@ public class ContactData {
     public String getAllEmails() {
         return allEmails;
     }
+    public ContactData withAllEmails(String allEmails) {
+        this.allEmails = allEmails;
+        return this;
+    }
     public String allAdress;
     public String getNewAdress() {
         return allAdress;

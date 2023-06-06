@@ -7,6 +7,8 @@ import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
 
+import java.io.File;
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -17,11 +19,12 @@ public class ContactCreationTests extends TestBase {
     @Test// (enabled = false)
     public void testContactCreation() throws Exception {
 
-       Contacts before = app.contact().allContacts();
+        Contacts before = app.contact().allContacts();
         app.goTo().contact();
-        ContactData contact = new ContactData().withFirstname("Петр").withLastname("Иванов");
+        File photo = new File("src/test/resources/Screen.png");
+        ContactData contact = new ContactData().withFirstname("Петр").withLastname("Иванов").withPhoto(photo);
         app.contact().createContact(contact);
-        Assert.assertEquals(app.contact().getContactCount(),before.size()+1);
+        Assert.assertEquals(app.contact().getContactCount(), before.size() + 1);
         Contacts after = app.contact().allContacts();
 
         assertThat(after, equalTo(before.withAdded(contact
@@ -31,6 +34,18 @@ public class ContactCreationTests extends TestBase {
 
 
     @Test
+    public void testCurrentDir() {
+        File currentDir = new File(".");
+        System.out.println(currentDir.getAbsoluteFile());
+       File photo = new File("src/test/resources/Screen.png");
+        System.out.println(photo.getAbsolutePath());
+        System.out.println(photo.exists());
+    }
+
+
+    // File photo = new File(currentDir.getAbsolutePath() + "/src/test/resources/Screen.png");
+
+    @Test
 
     public void testBadContactCreation() throws Exception {
 
@@ -38,7 +53,7 @@ public class ContactCreationTests extends TestBase {
         app.goTo().contact();
         ContactData contact = new ContactData().withFirstname("Иван '").withLastname("");
         app.contact().createContact(contact);
-        Assert.assertEquals(app.contact().getContactCount(),before.size());
+        Assert.assertEquals(app.contact().getContactCount(), before.size());
         Contacts after = app.contact().allContacts();
 
         assertThat(after, equalTo(before));

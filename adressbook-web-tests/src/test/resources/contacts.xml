@@ -1,0 +1,20 @@
+<list>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Иванов</firstname>
+    <lastname>Иван</lastname>
+    <address>Улица</address>
+    <mobilePhone>550777</mobilePhone>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Иванов</firstname>
+    <lastname>Иван</lastname>
+    <address>Улица</address>
+    <mobilePhone>551777</mobilePhone>
+  </ru.stqa.pft.addressbook.model.ContactData>
+  <ru.stqa.pft.addressbook.model.ContactData>
+    <firstname>Иванов</firstname>
+    <lastname>Иван</lastname>
+    <address>Улица</address>
+    <mobilePhone>552777</mobilePhone>
+  </ru.stqa.pft.addressbook.model.ContactData>
+</list>

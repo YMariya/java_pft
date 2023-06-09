@@ -15,12 +15,15 @@ public class DbConnectionContactTest {
         try {
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/addressbook?&user=root&password=");
             Statement st = conn.createStatement();
-            ResultSet rs = st.executeQuery("select id,lastname,firstname,address, mobile from addressbook");
+            ResultSet rs = st.executeQuery("select id,lastname,firstname,address, mobile, home, work," +
+                    " email, email2, email3  from addressbook");
             Contacts contacts = new Contacts();
             while (rs.next()) {
                 contacts.add(new ContactData().withId(rs.getInt("id")).withLastname(rs.getString("lastname"))
                         .withFirstname(rs.getString("firstname")).withAddress(rs.getString("address"))
-                        .withMobilePhone(rs.getString("mobile")));
+                        .withMobilePhone(rs.getString("mobile")).withHome(rs.getString("home"))
+                        .withWorkPhone(rs.getString("work")).withEmail(rs.getString("email"))
+                        .withEmail2(rs.getString("email2")).withEmail3(rs.getString("email3")));
             }
             rs.close();
             st.close();

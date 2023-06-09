@@ -89,6 +89,8 @@ public class ContactHelper extends GroupHelper {
         deleteSelectContact();
         wd.switchTo().alert().accept();
         contactCache = null;
+        returnToHomePage();
+
     }
 
     public boolean isThereAContact() {

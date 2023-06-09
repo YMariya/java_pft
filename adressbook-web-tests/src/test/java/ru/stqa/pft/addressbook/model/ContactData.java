@@ -14,8 +14,32 @@ public class ContactData {
     private  String lastname;
     @Expose
     private  String address;
+    private  String mobile;
+    private  String home;
     @Expose
     private  String email;
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public ContactData withMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+
+    public String getHome() {
+        return home;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public ContactData withHome(String home) {
+        this.home = home;
+        return this;
+    }
 private File photo;
 
     public File getPhoto() {
@@ -80,6 +104,13 @@ private File photo;
                 "id=" + id +
                 ", firstname='" + firstname + '\'' +
                 ", lastname='" + lastname + '\'' +
+                ", address='" + address + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", home='" + home + '\'' +
+                ", work='" + work + '\'' +
+                ", email='" + email + '\'' +
+                ", email2='" + email2 + '\'' +
+                ", email3='" + email3 + '\'' +
                 '}';
     }
 
@@ -114,32 +145,32 @@ private File photo;
         return this;
     }
 
-    private String mobilePhone;
-    public ContactData withMobilePhone(String mobilePhone) {
-        this.mobilePhone = mobilePhone;
+
+    public ContactData withMobilePhone(String mobile) {
+        this.mobile = mobile;
         return this;
 
 }
-    private String workPhone;
-    public ContactData withWorkPhone(String workPhone) {
-        this.workPhone = workPhone;
+    private String work;
+    public ContactData withWorkPhone(String work) {
+        this.work = work;
         return this;
     }
 
     public String getWorkPhone() {
-        return workPhone;
+        return work;
     }
 
     public void setWorkPhone(String workPhone) {
-        this.workPhone = workPhone;
+        this.work = work;
     }
 
     public String getMobilePhone() {
-        return mobilePhone;
+        return mobile;
     }
 
-    public void setMobilePhone(String mobilePhone) {
-        this.mobilePhone = mobilePhone;
+    public void setMobilePhone(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getHomePhone() {

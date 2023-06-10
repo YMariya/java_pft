@@ -2,8 +2,12 @@ package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
 import java.io.File;
+@Entity
+@Table(name = "addressbook")
 
 public class ContactData {
     @XStreamOmitField

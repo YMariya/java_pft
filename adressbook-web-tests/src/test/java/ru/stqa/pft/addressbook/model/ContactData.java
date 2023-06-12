@@ -2,25 +2,35 @@ package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 import java.io.File;
+
 @Entity
+
 @Table(name = "addressbook")
 
 public class ContactData {
     @XStreamOmitField
+    @Id
+    @Column(name = "id")
     private int id;
     @Expose
+    @Column(name = "firstname")
     private  String firstname;
     @Expose
+    @Column(name = "lastname")
     private  String lastname;
     @Expose
+    @Column(name = "address")
     private  String address;
     private  String mobile;
     private  String home;
     @Expose
+    @Column(name = "email")
     private  String email;
 
     public String getMobile() {
@@ -228,7 +238,7 @@ private File photo;
         return this;
     }
     public String allAdress;
-    public String getNewAdress() {
+    public String getAllAdress() {
         return allAdress;
     }
 

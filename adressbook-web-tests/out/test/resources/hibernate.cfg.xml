@@ -32,11 +32,11 @@
         <property name="show_sql">true</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">validate</property>  <!-- validate -->
+        <property name="hbm2ddl.auto">validate</property>
 
         <!-- Names the annotated entity class -->
-        <mapping class="ru.stqa.pft.addressbook.model.GroupData"/>    <!--привязки таблиц бд -->
-<!--        <mapping class="ru.stqa.pft.addressbook.model.ContactData"/>  &lt;!&ndash;привязки таблиц бд &ndash;&gt;-->
+        <mapping class="ru.stqa.pft.addressbook.model.GroupData"/>
+        <mapping class="ru.stqa.pft.addressbook.model.ContactData"/>
 
     </session-factory>
 

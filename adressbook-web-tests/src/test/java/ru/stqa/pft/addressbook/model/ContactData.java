@@ -2,11 +2,10 @@ package ru.stqa.pft.addressbook.model;
 
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import org.testng.annotations.DataProvider;
 
+import javax.xml.crypto.Data;
 import java.io.File;
 
 @Entity
@@ -18,20 +17,27 @@ public class ContactData {
     @Id
     @Column(name = "id")
     private int id;
-    @Expose
+
+    @Column(name = "deprecated")
+    private String deprecated;
+
     @Column(name = "firstname")
-    private  String firstname;
-    @Expose
+    private String firstname;
+
     @Column(name = "lastname")
-    private  String lastname;
-    @Expose
+    private String lastname;
+
     @Column(name = "address")
-    private  String address;
-    private  String mobile;
-    private  String home;
-    @Expose
+    private String address;
+
+    @Column(name = "mobile")
+    private String mobile;
+
+    @Column(name = "home")
+    private String home;
+
     @Column(name = "email")
-    private  String email;
+    private String email;
 
     public String getMobile() {
         return mobile;
@@ -54,14 +60,17 @@ public class ContactData {
         this.home = home;
         return this;
     }
-private File photo;
+
+
+    @Column(name = "photo")
+    private String photo;
 
     public File getPhoto() {
-        return photo;
+        return new File( photo);
     }
 
     public ContactData withPhoto(File photo) {
-        this.photo = photo;
+        this.photo = photo.getPath();
         return this;
     }
 
@@ -111,7 +120,6 @@ private File photo;
     }
 
 
-
     @Override
     public String toString() {
         return "ContactData{" +
@@ -147,15 +155,17 @@ private File photo;
         result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
         return result;
     }
+    @Transient
     private String newAdress;
+
     public ContactData withNewAdress(String newAdress) {
 
         this.newAdress = newAdress;
-        return this;}
+        return this;
+    }
 
-    private String telhome;
-    public ContactData withHomePhone(String telhome) {
-        this.telhome = telhome;
+    public ContactData withHomePhone(String home) {
+        this.home = home;
         return this;
     }
 
@@ -164,8 +174,12 @@ private File photo;
         this.mobile = mobile;
         return this;
 
-}
+    }
+
+
+    @Column(name = "work")
     private String work;
+
     public ContactData withWorkPhone(String work) {
         this.work = work;
         return this;
@@ -188,11 +202,11 @@ private File photo;
     }
 
     public String getHomePhone() {
-        return telhome;
+        return home;
     }
 
-    public void setTelhome(String telhome) {
-        this.telhome = telhome;
+    public void setHome(String home) {
+        this.home = home;
     }
 
     public String getAllPhones() {
@@ -204,12 +218,19 @@ private File photo;
         return this;
     }
 
+    @Transient
     public String allPhones;
+
+    @Column(name = "email2")
     public String email2;
+
     public ContactData withEmail2(String email2) {
         this.email2 = email2;
         return this;
     }
+
+
+    @Column(name = "email3")
     public String email3;
 
     public String getEmail2() {
@@ -217,11 +238,9 @@ private File photo;
     }
 
 
-
     public String getEmail3() {
         return email3;
     }
-
 
 
     public ContactData withEmail3(String email3) {
@@ -229,15 +248,21 @@ private File photo;
         return this;
     }
 
+    @Transient
     public String allEmails;
+
     public String getAllEmails() {
         return allEmails;
     }
+
     public ContactData withAllEmails(String allEmails) {
         this.allEmails = allEmails;
         return this;
     }
+
+    @Transient
     public String allAdress;
+
     public String getAllAdress() {
         return allAdress;
     }

@@ -18,7 +18,8 @@ public class ContactData {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "deprecated")
+
+    @Column(name = "deprecated", columnDefinition = "datetime")
     private String deprecated;
 
     @Column(name = "firstname")

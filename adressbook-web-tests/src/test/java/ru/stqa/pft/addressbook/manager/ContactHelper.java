@@ -3,6 +3,7 @@ package ru.stqa.pft.addressbook.manager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import ru.stqa.pft.addressbook.model.ContactData;
 import ru.stqa.pft.addressbook.model.Contacts;
 
@@ -175,4 +176,10 @@ public class ContactHelper extends GroupHelper {
     //  wd.findElement(By.xpath(String.format("//input[@value='%s']/../../td[8]/a",id))).click();
 //  wd.findElement(By.xpath(String.format("//tr[.//input[@value='%s']]/td[8]/a",id))).click();
 //  wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']",id))).click();
+
+    public void ContactAddToGroup(int id, String name) {
+        wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+        new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(name);
+        click(By.name("add"));
+    }
 }

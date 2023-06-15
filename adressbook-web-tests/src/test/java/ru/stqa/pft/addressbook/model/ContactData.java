@@ -7,6 +7,8 @@ import org.testng.annotations.DataProvider;
 
 import javax.xml.crypto.Data;
 import java.io.File;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 
@@ -39,6 +41,12 @@ public class ContactData {
 
     @Column(name = "email")
     private String email;
+
+
+@ManyToMany (fetch = FetchType.EAGER)
+@JoinTable(name = "address_in_groups",
+        joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn (name ="group_id") )
+    private Set<GroupData> groups = new HashSet<GroupData>();
 
     public String getMobile() {
         return mobile;
@@ -156,6 +164,11 @@ public class ContactData {
         result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
         return result;
     }
+
+    public Groups getGroups() {
+        return new Groups(groups);
+    }
+
     @Transient
     private String newAdress;
 

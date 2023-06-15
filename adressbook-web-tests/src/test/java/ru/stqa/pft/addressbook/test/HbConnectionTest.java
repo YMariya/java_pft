@@ -37,6 +37,7 @@ public class HbConnectionTest {
        List<GroupData> result = session.createQuery( "from GroupData" ).list();
         for ( GroupData group : result ) {
             System.out.println( group );
+
         }
         session.getTransaction().commit();
         session.close();

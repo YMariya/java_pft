@@ -35,4 +35,5 @@ private Set<ContactData> delegate;
         contacts.remove(contact);
         return contacts;
     }
+
 }

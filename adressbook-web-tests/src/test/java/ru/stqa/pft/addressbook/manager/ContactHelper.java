@@ -182,4 +182,11 @@ public class ContactHelper extends GroupHelper {
         new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(name);
         click(By.name("add"));
     }
+
+    public void ContactDeletionToGroup(int id, String text) {
+        new Select(wd.findElement(By.name("group"))).selectByVisibleText(text);
+        selectContactById(id);
+        click(By.name("remove"));
+    }
+
 }

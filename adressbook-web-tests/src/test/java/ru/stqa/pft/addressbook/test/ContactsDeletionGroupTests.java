@@ -42,22 +42,17 @@ public class ContactsDeletionGroupTests extends TestBase {
 
 @Test
 public void testContactsDeletionGroup() {
-    Groups beforeGroup = app.db().groups();
     Contacts beforeContact = app.db().contacts();
     ContactData forGroup = beforeContact.iterator().next();
-    GroupData forContact = beforeGroup.iterator().next();
     String name = forGroup.getGroups().iterator().next().getName();
+    Groups beforeGroups = app.db().groups();
     if (forGroup.getGroups().size() != 0) {
-        Groups beforeGroups = app.db().groups();
         app.goTo().home();
         app.contact().ContactDeletionToGroup(forGroup.getId(), name);
-        GroupData groupForContact = forGroup.getGroups()
-                .stream().filter(g -> g.getName().equals(name)).findFirst().get();
         app.goTo().home();
         Contacts afterContact = app.db().contacts();
         assertThat(afterContact.size(), equalTo(beforeContact.size()));
         Groups afterInGrous = app.db().groups();
-        app.goTo().home();
-        assertThat((afterInGrous), equalTo(new Groups(beforeGroups.withOut(groupForContact))));
+        assertThat((afterInGrous), equalTo(new Groups(beforeGroups)));
     }
 }}

@@ -20,15 +20,20 @@ public class ContactsAddGroupTests extends TestBase {
         if (app.group().all().size() == 0) {
             app.group().create(new GroupData().withName("test1"));
         }
+        app.goTo().home();
+        if (app.contact().getContactList().size() == 0) {
+            app.goTo().contact();
+            app.contact().add();
+        }
     }
+
     @Test
     public void testContactsAddGroup() {
-
         Contacts beforeContact = app.db().contacts();
         Groups beforeGroup = app.db().groups();
         ContactData forGroup = beforeContact.iterator().next();
-       GroupData forContact = beforeGroup.iterator().next();
-       Groups beforeGroups = app.db().groups();
+        GroupData forContact = beforeGroup.iterator().next();
+        Groups beforeGroups = app.db().groups();
         app.goTo().home();
         app.contact().ContactAddToGroup(forGroup.getId(), forContact.getName());
         app.goTo().home();

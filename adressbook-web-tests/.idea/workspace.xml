@@ -4,9 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f54595e-69f1-4636-a965-b274164ee684" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/manager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/manager/ContactHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactModificationTests.java" afterDir="false" />
+    <list default="true" id="6f54595e-69f1-4636-a965-b274164ee684" name="Changes" comment="Задание №16: Реализовать тесты для добавления контакта в группу и удаления контакта из группы.&#10;Исправление ошибок">
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/FtpHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/HelperBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/HttpSession.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/MailHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/RegistrationHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/model/MailMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/LoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/RegistrationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/resources/config_inc.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/ru/stqa/pft/addressbook/test/ContactsAddGroupTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/ru/stqa/pft/addressbook/test/ContactsAddGroupTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/ru/stqa/pft/addressbook/test/ContactsDeletionGroupTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/ru/stqa/pft/addressbook/test/ContactsDeletionGroupTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactsAddGroupTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactsAddGroupTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactsDeletionGroupTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactsDeletionGroupTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_pft/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java_pft/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantins-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/AppManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/AppManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantins-tests/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/src/test/resources/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +52,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2QKavmhJXO48D1NNPgk3DlbsJ3q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -31,9 +65,62 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Ирина/OneDrive/Документы/GitHub/java_pft/java_pft"
+    "last_opened_file_path": "C:/Users/Ирина/OneDrive/Документы/GitHub/java_pft/mantins-tests",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
+  <component name="RunManager" selected="TestNG.ContactsDeletionGroupTests.testContactsDeletionGroup">
+    <configuration name="ContactsDeletionGroupTests.testContactsDeletionGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.stqa.pft.addressbook.test.ContactsDeletionGroupTests.testContactsDeletionGroup&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ContactsDeletionGroupTests.testContactsDeletionGroup" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="adressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.test" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.test.ContactsDeletionGroupTests" />
+      <option name="METHOD_NAME" value="testContactsDeletionGroup" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.ContactsDeletionGroupTests.testContactsDeletionGroup" />
+        <item itemvalue="Gradle.ContactsDeletionGroupTests.testContactsDeletionGroup" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -44,5 +131,20 @@
       <updated>1685104960329</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Задание №16: Реализовать тесты для добавления контакта в группу и удаления контакта из группы.&#10;Исправление ошибок" />
+    <option name="LAST_COMMIT_MESSAGE" value="Задание №16: Реализовать тесты для добавления контакта в группу и удаления контакта из группы.&#10;Исправление ошибок" />
   </component>
 </project>

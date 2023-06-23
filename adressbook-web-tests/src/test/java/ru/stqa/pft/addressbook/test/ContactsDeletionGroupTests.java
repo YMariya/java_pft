@@ -1,6 +1,5 @@
 package ru.stqa.pft.addressbook.test;
 
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import ru.stqa.pft.addressbook.model.ContactData;
@@ -10,6 +9,7 @@ import ru.stqa.pft.addressbook.model.Groups;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.testng.Assert.assertEquals;
 
 public class ContactsDeletionGroupTests extends TestBase {
 
@@ -18,7 +18,6 @@ public class ContactsDeletionGroupTests extends TestBase {
         app.goTo().groupPage();
         if (app.group().all().size() == 0) {
             app.group().create(new GroupData().withName("test1"));
-
         }
 
         app.goTo().home();
@@ -40,19 +39,26 @@ public class ContactsDeletionGroupTests extends TestBase {
     }
 
 
-@Test
-public void testContactsDeletionGroup() {
-    Contacts beforeContact = app.db().contacts();
-    ContactData forGroup = beforeContact.iterator().next();
-    String name = forGroup.getGroups().iterator().next().getName();
-    Groups beforeGroups = app.db().groups();
-    if (forGroup.getGroups().size() != 0) {
+    @Test
+    public void testContactsDeletionGroup() {
+
+        Contacts beforeContact = app.db().contacts();
+        ContactData forGroup = beforeContact.iterator().next();
+        ContactData contactForGroup = beforeContact.iterator().next();
+        Groups beforeInGroups = app.db().groups();
+        String name = contactForGroup.getGroups().iterator().next().getName();
         app.goTo().home();
         app.contact().ContactDeletionToGroup(forGroup.getId(), name);
-        app.goTo().home();
+
+        GroupData groupForContact = contactForGroup.getGroups()
+                .stream().filter(g -> g.getName().equals(name)).findFirst().get();
+
         Contacts afterContact = app.db().contacts();
         assertThat(afterContact.size(), equalTo(beforeContact.size()));
         Groups afterInGrous = app.db().groups();
-        assertThat((afterInGrous), equalTo(new Groups(beforeGroups)));
+        assertEquals(beforeInGroups.size(), afterInGrous.size());
+        assertThat((afterInGrous), equalTo(new Groups(beforeInGroups.withOut(groupForContact))));
     }
-}}
+
+
+}

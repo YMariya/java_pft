@@ -5,39 +5,147 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6f54595e-69f1-4636-a965-b274164ee684" name="Changes" comment="Задание №16: Реализовать тесты для добавления контакта в группу и удаления контакта из группы.&#10;Исправление ошибок">
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/FtpHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/HelperBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/HttpSession.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/MailHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/RegistrationHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/model/MailMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/LoginTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/RegistrationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/resources/config_inc.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../untitled/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/java_pft.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/ChangePassHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/model/UserData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/model/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/ChangePasswordTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/Arrow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/Main_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/Main_3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/inheritance_5/Main_5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/inheritance_5/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/inheritance_5/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/method_3/Point.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/method_3/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/method_3/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/method_3/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/object_4/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/object_4/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/object_4/Phone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/object_4/Season.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../test/src/abc/object_4/Song.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitled/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../untitledTEST/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/ru/stqa/pft/addressbook/test/ContactsAddGroupTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/ru/stqa/pft/addressbook/test/ContactsAddGroupTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/classes/ru/stqa/pft/addressbook/test/ContactsDeletionGroupTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/ru/stqa/pft/addressbook/test/ContactsDeletionGroupTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactsAddGroupTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactsAddGroupTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactsDeletionGroupTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/stqa/pft/addressbook/test/ContactsDeletionGroupTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java_pft/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../java_pft/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230609T235303.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230609T235622.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230610T000047.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230610T000156.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230610T000823.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230610T001449.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230610T001907.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230610T001937.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230610T001958.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T172822.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T173027.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T173215.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T173243.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T173605.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T173956.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T174642.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T181243.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230611T181446.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T224716.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T225312.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T225600.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T230117.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T232403.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T232507.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T232556.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T232907.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T234454.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T235048.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T235148.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T235212.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T235543.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T235731.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230612T235823.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T000329.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T000355.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T000527.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T000913.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T001804.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T010638.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T133452.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T133521.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T133629.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T133718.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T133940.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T194257.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T215747.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T215812.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T220449.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T220511.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T220946.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230613T224926.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230614T234641.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230614T234819.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230614T235020.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230614T235738.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T000229.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T000247.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T000509.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T000631.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T001439.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T002104.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T002207.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T002237.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T002542.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T002803.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T002851.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T002924.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T003519.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T003900.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T003938.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T004214.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T004235.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T005151.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T005527.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T005958.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T010429.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T223343.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T223626.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230615T224059.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T211032.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T211235.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T214137.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T214229.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T215103.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T215355.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T220048.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T220331.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T220450.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230616T220858.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230618T013046.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230618T013459.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230618T013558.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230618T013652.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230618T014017.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test-20230618T014104.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../mantins-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/AppManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/AppManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/tests/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../mantins-tests/src/test/resources/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/src/test/resources/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/HttpSession.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/HttpSession.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/MailHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../mantins-tests/src/test/java/ru/stqa/pft/mantis/manager/MailHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../untitledTEST/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/../addressbook/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../untitled/settings.gradle" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +156,26 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="adressbook-web-tests" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -65,14 +193,14 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Ирина/OneDrive/Документы/GitHub/java_pft/mantins-tests",
+    "last_opened_file_path": "C:/Users/Ирина/OneDrive/Документы/GitHub/java_pft/adressbook-web-tests",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.ContactsDeletionGroupTests.testContactsDeletionGroup">
+  <component name="RunManager" selected="TestNG.ContactsAddGroupTests.testContactsAddGroup">
     <configuration name="ContactsDeletionGroupTests.testContactsDeletionGroup" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -96,6 +224,41 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="ContactCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="adressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.test" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.test.ContactCreationTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactsAddGroupTests.testContactsAddGroup" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="adressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.stqa.pft.addressbook.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.stqa.pft.addressbook.test" />
+      <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.test.ContactsAddGroupTests" />
+      <option name="METHOD_NAME" value="testContactsAddGroup" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ContactsDeletionGroupTests.testContactsDeletionGroup" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="adressbook-web-tests.test" />
       <extension name="coverage">
@@ -116,6 +279,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactsAddGroupTests.testContactsAddGroup" />
+        <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="TestNG.ContactsDeletionGroupTests.testContactsDeletionGroup" />
         <item itemvalue="Gradle.ContactsDeletionGroupTests.testContactsDeletionGroup" />
       </list>
@@ -130,6 +295,14 @@
       <option name="presentableId" value="Default" />
       <updated>1685104960329</updated>
     </task>
+    <task id="LOCAL-00001" summary="Задание №16: Реализовать тесты для добавления контакта в группу и удаления контакта из группы.&#10;Исправление ошибок">
+      <created>1687555778674</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687555778674</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

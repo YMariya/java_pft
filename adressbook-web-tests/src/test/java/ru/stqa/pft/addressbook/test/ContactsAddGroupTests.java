@@ -36,10 +36,7 @@ public class ContactsAddGroupTests extends TestBase {
         app.goTo().home();
         app.contact().ContactAddToGroup(forGroup.getId(), forContact.getName());
         app.goTo().home();
-        Contacts afterContact = app.db().contacts();
-        assertThat(afterContact.size(), equalTo(beforeContact.size()));
-        Groups afterInGrous = app.db().groups();
-        assertThat((afterInGrous), equalTo(new Groups(beforeGroups.withOut(forContact))));
+        verifyContactListInUI();
     }
 }
 

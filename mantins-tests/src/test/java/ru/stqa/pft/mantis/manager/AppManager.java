@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.Browser;
 import  ru.stqa.pft.mantis.appmanager.FtpHelper;
+import ru.stqa.pft.mantis.manager.ChangePassHelper;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,6 +21,8 @@ public class AppManager {
     private RegistrationHelper registrationHelper;
     private FtpHelper ftp;
     private MailHelper mailHelper;
+    private ChangePassHelper changeHelper;
+
     public AppManager(String browser) {
 
         this.browser = browser;
@@ -85,6 +88,13 @@ public class AppManager {
         }
         return mailHelper;
     }
+    public ChangePassHelper change() {
+        if (changeHelper == null) {
+            changeHelper = new ChangePassHelper(this);
+        }
+        return changeHelper;
+    }
+
 
 }
 
